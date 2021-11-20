@@ -81,11 +81,7 @@ class BertBinaryClassifier(nn.Module):
 with open("./data/train.p","rb") as f:
     data=pickle.load(f)
 texts=[i[1] for i in data]
-for i in data:
-    try:
-        int(i[-1])
-    except:
-        print(i)
+
 y=[int(i[-1]) for i in data]
 
 '''
